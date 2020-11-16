@@ -5,7 +5,6 @@
 
      Vector
         constructor
-        a
         append
         clear
         concat
@@ -25,3 +24,7 @@
 # Examples:
 
 https://github.com/serge-hulne/vector-ts-js/blob/main/vector_test.ts
+
+# Documentation:
+
+https://serge-hulne.github.io/vector-ts-js/classes/vector.html
