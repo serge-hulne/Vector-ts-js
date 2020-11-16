@@ -21,3 +21,7 @@ Vector : A Data structure similar to a Python List
         substitute
         substituteAt
         toArray
+
+# Examles:
+
+https://github.com/serge-hulne/vector-ts-js/blob/main/vector_test.ts
