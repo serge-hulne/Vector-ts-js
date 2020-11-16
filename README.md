@@ -1,5 +1,5 @@
 # vector-ts-js
-Vector : A Data structure similar to a Python List
+Vector : A Data structure similar to a Python List (for JavaScript / Typescript):
 
 # Methods:
 
