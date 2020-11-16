@@ -1,0 +1,28 @@
+{
+  "name": "vector-ts",
+  "version": "1.0.0",
+  "description": "A Data structure similar to a Python List (for JavaScript / Typescript)",
+  "main": "vector.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serge-hulne/vector-ts-js.git"
+  },
+  "keywords": [
+    "Data structure",
+    "Typescript",
+    "JavaScript",
+    "emulates Python List"
+  ],
+  "author": "Serge HULNE",
+  "license": "GPL-2.0-or-later",
+  "bugs": {
+    "url": "https://github.com/serge-hulne/vector-ts-js/issues"
+  },
+  "homepage": "https://github.com/serge-hulne/vector-ts-js#readme"
+}
