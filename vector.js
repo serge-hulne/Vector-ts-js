@@ -1,4 +1,7 @@
 "use strict";
+/**
+ * Vector : Convenience class Wrapper around Array()
+ */
 var __spreadArrays = (this && this.__spreadArrays) || function () {
     for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
     for (var r = Array(s), k = 0, i = 0; i < il; i++)
@@ -6,11 +9,8 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
             r[k] = a[j];
     return r;
 };
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 exports.Vector = void 0;
-/**
- * Vector : Convenience class Wrapper around Array()
- */
 var Vector = /** @class */ (function () {
     function Vector() {
         this.a = new Array();
@@ -25,7 +25,7 @@ var Vector = /** @class */ (function () {
     /**
      * @param item : Item to be deleted from current Vector
      */
-    Vector.prototype.delete = function (item) {
+    Vector.prototype["delete"] = function (item) {
         var pos = this.a.indexOf(item);
         if (pos > -1) {
             this.a.splice(pos, 1);
@@ -145,6 +145,23 @@ var Vector = /** @class */ (function () {
      */
     Vector.prototype.fromArray = function (v) {
         this.a = __spreadArrays(v);
+    };
+    /**
+     *
+     * @param item : item which is checked for inclusion.
+     */
+    Vector.prototype.includes = function (item) {
+        return this.a.includes(item);
+    };
+    Vector.prototype.forEach = function (fn) {
+        this.a.forEach(fn);
+    };
+    /**
+     * @param fn: Sorting function
+     */
+    Vector.prototype.sort = function (fn) {
+        if (fn === void 0) { fn = undefined; }
+        this.a.sort(fn);
     };
     return Vector;
 }());

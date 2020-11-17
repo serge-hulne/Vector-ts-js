@@ -1,6 +1,11 @@
 /**
  * Vector : Convenience class Wrapper around Array()
  */
+
+interface callback<U> {
+    (item: U): void;
+}
+
 class Vector <T> {
 
     /**
@@ -153,6 +158,26 @@ class Vector <T> {
     fromArray(v:Array<T>)  {
         this.a = [...v];
     }
+
+    /**
+     * 
+     * @param item : item which is checked for inclusion.
+     */
+    includes(item: T) : boolean{
+        return this.a.includes(item);
+    }
+
+    forEach(fn: callback<T>) {
+        this.a.forEach(fn);
+    }
+
+    /**
+     * @param fn: Sorting function 
+     */
+    sort(fn:any=undefined) {
+        this.a.sort(fn);
+    }
+
 }
 
 export { Vector };

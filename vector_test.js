@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 var vector_1 = require("./vector");
 // Test:
 function testing() {
@@ -10,7 +10,7 @@ function testing() {
     console.log(v.a);
     console.log("- - -");
     console.log("delete:");
-    v.delete("B");
+    v["delete"]("B");
     console.log(v.a);
     console.log("- - -");
     console.log("append:");
@@ -74,9 +74,19 @@ function testing() {
     t.substitute("AAA", "Alpha");
     console.log({ t: t });
     console.log("delete");
-    t.delete("Gamma");
+    t["delete"]("Gamma");
     console.log({ t: t });
-    t.delete("Gamma");
-    console.log({ t: t });
+    // t.delete("Gamma");
+    // console.log({t: t});
+    console.log("\n- - -");
+    if (t.includes("Alpha")) {
+        console.log("included");
+    }
+    console.log("\n- - -");
+    u.append("A");
+    u.sort();
+    u.forEach(function (item) {
+        console.log(item);
+    });
 }
 testing();

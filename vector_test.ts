@@ -97,8 +97,24 @@ function testing() {
     t.delete("Gamma");
     console.log({t: t});
 
-    t.delete("Gamma");
-    console.log({t: t});
+    // t.delete("Gamma");
+    // console.log({t: t});
+
+    console.log("\n- - -");
+    if (t.includes("Alpha")) {
+        console.log("included");
+    }
+
+    console.log("\n- - -");
+    u.append("A");
+    u.sort();
+
+    u.forEach(item =>{
+        console.log(item);
+    })
+
+
+
 }
 
 testing();
