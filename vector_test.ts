@@ -113,7 +113,25 @@ function testing() {
         console.log(item);
     })
 
+    console.log("\n- - -");
+    console.log(u);
+    u.swapAt(1, 2);
+    console.log(u);
 
+    console.log("\n- - -");
+    console.log(u);
+    console.log(u.getValue(2));
+
+    console.log("\n- - -");
+    console.log(u);
+    u.setValue(1, "M")
+    console.log(u);
+
+    console.log("\n- - -");
+    console.log(u);
+    console.log(u);
+    console.log(u.length());
+    
 
 }
 

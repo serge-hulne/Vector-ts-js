@@ -9,7 +9,7 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
             r[k] = a[j];
     return r;
 };
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.Vector = void 0;
 var Vector = /** @class */ (function () {
     function Vector() {
@@ -25,7 +25,7 @@ var Vector = /** @class */ (function () {
     /**
      * @param item : Item to be deleted from current Vector
      */
-    Vector.prototype["delete"] = function (item) {
+    Vector.prototype.delete = function (item) {
         var pos = this.a.indexOf(item);
         if (pos > -1) {
             this.a.splice(pos, 1);
@@ -162,6 +162,42 @@ var Vector = /** @class */ (function () {
     Vector.prototype.sort = function (fn) {
         if (fn === void 0) { fn = undefined; }
         this.a.sort(fn);
+    };
+    /**
+     *
+     * @param i fist position for swap.
+     * @param j second position for swap.
+     */
+    Vector.prototype.swapAt = function (i, j) {
+        var tmp = this.a[i];
+        this.substituteAt(i, this.a[j]);
+        this.substituteAt(j, tmp);
+    };
+    /**
+     *
+     * @param i Index of item whose value is returned
+     */
+    Vector.prototype.getValue = function (i) {
+        return this.a[i];
+    };
+    /**
+     *
+     * @param i Index of value to be set
+     * @param value value to be set
+     */
+    Vector.prototype.setValue = function (i, value) {
+        if (i < this.a.length) {
+            this.a[i] = value;
+        }
+        else {
+            throw ("Index " + i + " not in range");
+        }
+    };
+    /**
+     * Returns vector length
+     */
+    Vector.prototype.length = function () {
+        return this.a.length;
     };
     return Vector;
 }());

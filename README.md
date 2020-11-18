@@ -3,7 +3,6 @@
 
 # Methods:
 
-     Vector
         constructor
         append
         clear
@@ -12,14 +11,21 @@
         deleteAt
         deleteAtEnd
         deleteAtStart
+        forEach
         fromArray
+        getValue
+        includes
         insertAt
         insertAtEnd
         insertAtStart
+        length
         prepend
+        setValue
+        sort
         substitute
         substituteAt
-        toArray
+        swapAt
+toArray
 
 # Examples:
 

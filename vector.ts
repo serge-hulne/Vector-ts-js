@@ -178,6 +178,46 @@ class Vector <T> {
         this.a.sort(fn);
     }
 
+    /**
+     * 
+     * @param i fist position for swap.
+     * @param j second position for swap.
+     */
+    swapAt(i:number, j:number){
+        let tmp = this.a[i];
+        this.substituteAt(i, this.a[j])
+        this.substituteAt(j, tmp);
+    }
+
+    /**
+     * 
+     * @param i Index of item whose value is returned
+     */
+    getValue(i: number) : T {
+        return this.a[i];
+    }
+
+    /**
+     * 
+     * @param i Index of value to be set
+     * @param value value to be set
+     */
+
+    setValue(i: number, value:T) {
+        if (i < this.a.length) {
+            this.a[i] = value;
+        } else {
+            throw(`Index ${i} not in range`);
+        }
+    }
+
+    /**
+     * Returns vector length
+     */
+    length() : number {
+        return this.a.length;
+    }
+
 }
 
 export { Vector };

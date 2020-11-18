@@ -1,6 +1,6 @@
 {
   "name": "vector-ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Data structure similar to a Python List (for JavaScript / Typescript)",
   "main": "vector.js",
   "directories": {
